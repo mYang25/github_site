@@ -37,34 +37,34 @@ header {
 }
 
 .hex-grid {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(5, 140px);
+  grid-auto-rows: 122px;
   justify-content: center;
-  gap: 1.5em;
-  padding: 2em;
-  max-width: 800px;
-  margin: auto;
+  gap: 0;
   position: relative;
-  z-index: 2;
 }
 
 .hex {
   width: 120px;
   height: 104px;
+  margin: auto;
+  clip-path: polygon(50% 0%, 93% 25%, 93% 75%, 50% 100%, 7% 75%, 7% 25%);
   background: #4f4fff;
-  color: white;
-  clip-path: polygon(
-    50% 0%, 93% 25%, 93% 75%, 
-    50% 100%, 7% 75%, 7% 25%
-  );
   display: flex;
   align-items: center;
   justify-content: center;
-  text-decoration: none;
-  transition: background 0.3s, transform 0.2s;
-  font-weight: bold;
-  position: relative;
-  box-shadow: 0 0 10px #4f4fff90;
+  transition: transform 0.3s;
+}
+
+/* Offset every other row to form the beehive pattern */
+.hex:nth-child(2n) {
+  transform: translateY(61px);
+}
+
+/* Offset every other row to form the beehive pattern */
+.hex:nth-child(2n) {
+  transform: translateY(61px);
 }
 
 .hex:hover {
