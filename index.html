@@ -3,8 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Matthew Yang</title>
-  <link rel="stylesheet" href="style.css" />
+  <!--Icons-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+  <!--CSS-->
+  <link rel="stylesheet" href="style.css"/>
+  <title>Matthew's Landing</title>
 </head>
 <body>
   <header>
@@ -12,13 +15,60 @@
     <p>Welcome to my digital hub. Explore who I am, what I've done, and what I love to build.</p>
   </header>
 
-  <main class="hex-grid-container">
-    <div class="hex-grid">
-      <a href="about.html" class="hex"><span>About Me</span></a>
-      <a href="resume.html" class="hex"><span>Resume</span></a>
-      <a href="code.html" class="hex"><span>Code</span></a>
-      <a href="projects.html" class="hex"><span>Projects</span></a>
+  <!--HTML-->
+  <div class="honeycomb">
+    <div class="container">
+      <div class="hexagon blue">
+        <div class="inner"><h1>01</h1></div>
+      </div>
+      <div class="hexagon white">
+        <div class="inner"><h1>02</h1></div>
+      </div>
+      <div class="hexagon border-image green">
+        <div class="inner"><h1>03</h1></div>
+        <img src="p0.jpg">
+      </div>
+      <div class="hexagon purple">
+        <div class="inner">
+          <h1><i class="fab fa-github"></i></h1>
+        </div>
+      </div>
+      <div class="hexagon dark">
+        <div class="inner"><h1>05</h1></div>
+      </div>
+      <div class="hexagon green no-text">
+        <div class="inner"><h1>00</h1></div>
+      </div>
+      <div class="hexagon blue">
+        <div class="inner"><h1>07</h1></div>
+      </div>
+      <div class="hexagon bg-image purple no-text">
+        <div class="inner"><h1>00</h1></div>
+        <img src="p1.jpg">
+      </div>
+      <div class="hexagon green">
+        <div class="inner"><h1>09</h1></div>
+      </div>
+      <div class="hexagon bg-image dark">
+        <div class="inner"><h1>10</h1></div>
+        <img src="p2.jpg">
+      </div>
+      <div class="hexagon bg-image red">
+        <div class="inner">
+          <h1><i class="fab fa-facebook"></i></h1>
+        </div>
+        <img src="p3.jpg">
+      </div>
+      <div class="hexagon orange">
+        <div class="inner"><h1>12</h1></div>
+      </div>
+      <div class="hexagon red">
+        <div class="inner"><h1>13</h1></div>
+      </div>
     </div>
-  </main>
+  </div>
+
+  <!--JavaScript-->
+  <script  src="main.js"></script>
 </body>
 </html>
