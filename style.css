@@ -1,6 +1,6 @@
 body {
   font-family: sans-serif;
-  background-color: #212125;
+  background-color: #ffffff;
 }
 
 * {
@@ -142,7 +142,9 @@ body {
   z-index: 0;
 }
 
-.inner h1 {font-size: 4em;}
+.inner h2 {font-size: 4em;}
+
+.inner h1 {font-size: 1.5em;}
 
 .hexagon:nth-child(1) {
   margin-left: 5.5em;
