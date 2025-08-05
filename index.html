@@ -11,48 +11,56 @@
 </head>
 <body>
   <header>
-    <nav class="top-nav">
-      <ul>
+  <div class="header-content">
+    <div class="dropdown-menu">
+      <input type="checkbox" id="menu-toggle">
+      <label for="menu-toggle" class="menu-icon"><i class="fas fa-bars"></i></label>
+      <ul class="menu">
         <li><a href="#">ABOUT ME</a></li>
         <li><a href="#">EXPERIENCE</a></li>
         <li><a href="#">SKILLS</a></li>
         <li><a href="#">RESUME</a></li>
         <li><a href="#">EMAIL ME</a></li>
       </ul>
-    </nav>
-    <h1>Hi, I'm Matthew Yang</h1>
-    <p>Software Engineer | Fishing Enthusiast | Culinary Artist</p>
+    </div>
+
+    <div class="intro">
+      <h1>Hi! I'm Matthew Yang</h1>
+      <p>Software Engineer | Fishing Enthusiast | Culinary Artist</p>
+    </div>
+  </div>
   </header>
+</body>
 
   <!--HTML-->
   <div class="honeycomb">
     <div class="container">
       <div class="hexagon blue">
+        <div class="inner">
+          <h2><i class="fab fa-linkedin"></i></h2>
+        </div>
+      </div>
+      <div class="hexagon purple">
         <div class="inner"><h1>about me</h1></div>
       </div>
       <div class="hexagon red">
         <div class="inner"><h1>experience</h1></div>
       </div>
-      <div class="hexagon border-image green">
-        <div class="inner"><h1>skills</h1></div>
-        <img src="p0.jpg">
-      </div>
-      <div class="hexagon purple">
+      <div class="hexagon green">
         <div class="inner">
           <h2><i class="fab fa-github"></i></h2>
         </div>
       </div>
-      <div class="hexagon dark">
-        <div class="inner"><h1>resume</h1></div>
+      <div class="hexagon border-image blue">
+        <div class="inner"><h1>skills</h1></div>
+        <img src="p0.jpg">
       </div>
       <div class="hexagon bg-image green no-text">
         <div class="inner"></div>
         <img src="p2.jpg">
       </div>
-      <div class="hexagon blue">
-        <div class="inner">
-          <h2><i class="fa-solid fa-envelope"></i></h2>
-        </div>
+      <div class="hexagon dark">
+        <div class="inner"><h1>resume</h1></div>
       </div>
       <div class="hexagon bg-image purple no-text">
         <div class="inner"></div>
@@ -60,11 +68,6 @@
       </div>
       <div class="hexagon orange">
         <div class="inner"><h1>projects</h1></div>
-      </div>
-      <div class="hexagon dark">
-        <div class="inner">
-          <h2><i class="fab fa-linkedin"></i></h2>
-        </div>
       </div>
     </div>
   </div>
