@@ -1,13 +1,42 @@
-const hexagons = document.querySelectorAll(".hexagon");
+document.addEventListener("DOMContentLoaded", () => {
+  const titleText = "Hi! I'm Matthew Yang";
+  const titleElement = document.getElementById("title");
+  const cursor = document.querySelector(".cursor");
+  const subtitleParts = document.querySelectorAll("#subtitle .subtitle-part");
+  const hexagons = document.querySelectorAll(".hexagon");
 
-let delay = 300;
+  let index = 0;
 
-hexagons.forEach(hexagon => {
-    hexagon.style.opacity = "0";
+  function typeTitle() {
+    if (index < titleText.length) {
+      titleElement.innerHTML = titleText.substring(0, index + 1) + '<span class="cursor">|</span>';
+      index++;
+      setTimeout(typeTitle, 100); // typing speed
+    } else {
+      showSubtitles();
+    }
+  }
 
-    hexagon.style.animation = "fadeUp 200ms linear forwards";
+  function showSubtitles() {
+    subtitleParts.forEach((part, i) => {
+      setTimeout(() => {
+        part.classList.add("fade-up");
+        if (i === subtitleParts.length - 1) {
+          startHexagonAnimation();
+        }
+      }, i * 500); // staggered delay
+    });
+  }
 
-    hexagon.style.animationDelay = delay + "ms";
+  function startHexagonAnimation() {
+    let delay = 350;
+    hexagons.forEach(hexagon => {
+      hexagon.style.opacity = "0";
+      hexagon.style.animation = "fadeUp 200ms linear forwards";
+      hexagon.style.animationDelay = delay + "ms";
+      delay += 200;
+    });
+  }
 
-    delay += 200;
+  typeTitle();
 });

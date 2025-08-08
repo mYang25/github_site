@@ -1,3 +1,100 @@
+/* Dropdown menu */
+.dropdown-menu {
+  position: relative;
+  text-align: left;
+}
+
+.menu-icon {
+  font-size: 1.5em;
+  cursor: pointer;
+  color: #333;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+.menu {
+  display: none;
+  list-style: none;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 0.5em 1em;
+  position: absolute;
+  top: 3em; /* Leave space for the icon */
+  left: 1em;
+  z-index: 10;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.menu li {
+  margin: 0.5em 0;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: #333;
+}
+
+#menu-toggle:checked + .menu-icon + .menu {
+  display: block;
+}
+
+/* Center header text */
+header {
+  background-color: #e0f4ff;
+  padding: 2em 1em;
+  text-align: center;
+  position: relative;
+}
+
+.header-content .intro {
+  max-width: 600px;
+  margin: 0 auto;
+  padding-top: 1em;
+}
+
+.header-content h1 {
+  font-size: 2.5em;
+  margin-bottom: 0.5em;
+}
+
+.header-content p {
+  font-size: 1.2em;
+  color: #444;
+}
+
+.cursor {
+  display: inline-block;
+  font-weight: 100;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  50.1%, 100% { opacity: 0; }
+}
+
+.subtitle-part {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.fade-up {
+  animation: fadeUp 500ms ease forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Body content */
 body {
   font-family: sans-serif;
   background-color: #ffffff;
@@ -40,9 +137,16 @@ body {
   user-select: none;
 }
 
+.hexagon a {
+  text-decoration: none;
+}
+
 .hexagon {
   position: relative;
   margin-block: -3.9em;
+  opacity: 0;
+  animation: fadeInHex 1s ease forwards;
+  animation-delay: 0.5s;
 }
 
 .blue {
@@ -201,74 +305,4 @@ body {
     opacity: 1;
     tranform: translateY(0);
   }
-}
-
-header {
-  background-color: #e0f4ff;
-  padding: 2em 1em;
-  text-align: center;
-  position: relative;
-}
-
-/* Center header text */
-.header-content .intro {
-  max-width: 600px;
-  margin: 0 auto;
-  padding-top: 1em; /* Add a little padding so it's not touching the menu */
-}
-
-.header-content h1 {
-  font-size: 2.5em;
-  margin-bottom: 0.5em;
-}
-
-.header-content p {
-  font-size: 1.2em;
-  color: #444;
-}
-
-/* Dropdown menu */
-.dropdown-menu {
-  position: relative;  /* Not absolute — let it flow with header */
-  text-align: left;
-}
-
-.menu-icon {
-  font-size: 1.5em;
-  cursor: pointer;
-  color: #333;
-  position: absolute;
-  top: 5px;
-  left: 5px;
-}
-
-#menu-toggle {
-  display: none;
-}
-
-/* The menu itself */
-.menu {
-  display: none;
-  list-style: none;
-  background-color: #fff;
-  border: 1px solid #ccc;
-  padding: 0.5em 1em;
-  position: absolute;
-  top: 3em; /* Leave space for the icon */
-  left: 1em;
-  z-index: 10;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-.menu li {
-  margin: 0.5em 0;
-}
-
-.menu li a {
-  text-decoration: none;
-  color: #333;
-}
-
-#menu-toggle:checked + .menu-icon + .menu {
-  display: block;
 }
