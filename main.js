@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (index < titleText.length) {
       titleElement.innerHTML = titleText.substring(0, index + 1) + '<span class="cursor">|</span>';
       index++;
-      setTimeout(typeTitle, 100); // typing speed
+      setTimeout(typeTitle, 100); 
     } else {
       showSubtitles();
     }
@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (i === subtitleParts.length - 1) {
           startHexagonAnimation();
         }
-      }, i * 500); // staggered delay
+      }, i * 300);
     });
   }
 
