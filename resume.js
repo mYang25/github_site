@@ -1,0 +1,21 @@
+const ldJson = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Matthew Yang",
+  "email": "mailto:myang98732190@gmail.com",
+  "telephone": "+1-424-464-2827",
+  "url": "https://myang25.github.io",
+  "sameAs": [
+    "https://www.linkedin.com/in/matthewyangucsd",
+    "https://github.com/mYang25"
+  ],
+  "alumniOf": {
+    "@type": "CollegeOrUniversity",
+    "name": "University of California, San Diego"
+  }
+};
+
+const script = document.createElement("script");
+script.type = "application/ld+json";
+script.textContent = JSON.stringify(ldJson);
+document.head.appendChild(script);
