@@ -124,18 +124,6 @@ h2{
   font-size: 13px;
 }
 
-/* Toolbar */
-.toolbar{
-  position: sticky;
-  top: 0;
-  backdrop-filter: blur(6px);
-  background: color-mix(in oklab, var(--bg) 85%, transparent);
-  border-bottom: 1px solid var(--line);
-  padding: 10px 20px;
-  display:flex;
-  justify-content: flex-end;
-  z-index: 10;
-}
 .btn{
   border:1px solid var(--line);
   background: var(--chip);
@@ -146,20 +134,3 @@ h2{
 }
 .btn:hover{ filter:brightness(0.98); }
 .btn:active{ transform: translateY(1px); }
-
-/* Print */
-@media print{
-  .toolbar{ display:none !important; }
-  a{ text-decoration: none; color: inherit; }
-  section{ break-inside: avoid; }
-  .item{ break-inside: avoid; }
-  body{ background:#fff; }
-}
-
-/* Accessibility helper */
-.visually-hidden{
-  position:absolute !important;
-  height:1px; width:1px;
-  overflow:hidden; clip:rect(1px,1px,1px,1px);
-  white-space:nowrap;
-}
