@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (index < titleText.length) {
       titleElement.innerHTML = titleText.substring(0, index + 1) + '<span class="cursor">|</span>';
       index++;
-      setTimeout(typeTitle, 100); 
+      setTimeout(typeTitle, 80); 
     } else {
       showSubtitles();
     }
@@ -24,17 +24,17 @@ document.addEventListener("DOMContentLoaded", () => {
         if (i === subtitleParts.length - 1) {
           startHexagonAnimation();
         }
-      }, i * 300);
+      }, i * 200);
     });
   }
 
   function startHexagonAnimation() {
-    let delay = 350;
+    let delay = 300;
     hexagons.forEach(hexagon => {
       hexagon.style.opacity = "0";
       hexagon.style.animation = "fadeUp 200ms linear forwards";
       hexagon.style.animationDelay = delay + "ms";
-      delay += 200;
+      delay += 150;
     });
   }
 
