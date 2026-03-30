@@ -1,0 +1,43 @@
+body {
+    text-align: center;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+}
+
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* height: 50vh; */
+}
+
+.coming-soon-container {
+    padding: 40px 20px;
+    width: 100vw;
+    font-size: 1.3em;
+    color: #555;
+}
+
+#pier-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    min-height: 80vh;
+    background-image: url("pier.svg");
+    background-size: cover;
+    /* background-repeat: no-repeat; */
+    background-position: center;
+}
+
+.col {
+    flex-grow: 1;
+}
+
+header {
+  background-color: #e0f4ff;
+  padding: 2em 1em;
+  text-align: center;
+  position: relative;
+}
